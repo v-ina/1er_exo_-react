@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.nav--ul{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  padding: 10px 50px;
+}
+.nav--ul li:nth-child(2){
+  margin-left: auto;
+}
+.nav--ul a{
+  text-decoration: none;
+  color: black;
+}
+.nav--logo{
+  width: 200px;
+}
+
+.product{
+  display: flex;
+  gap: 30px;
+}
