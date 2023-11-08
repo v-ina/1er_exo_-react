@@ -1,6 +1,9 @@
 import logo from "./img/google.svg"
 
 function Header (){
+
+    const isUserLoggedIN = true
+
     return (
         <header>
             <nav>
@@ -8,7 +11,13 @@ function Header (){
                     <li><a href=""><img src={logo} className="nav--logo" alt="logo" /></a></li>
                     <li><a href="">ACCEUIL</a></li>
                     <li><a href="">ABOUT US</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li>
+                        {isUserLoggedIN ? (
+                            <a href="">MY PAGE</a>
+                            ):( <button>CONNECTEZ-VOUS</button>
+                        )}
+                            
+                    </li>
                 </ul>
             </nav>
             <h1>Bonjour? JE SUIS H1</h1>
