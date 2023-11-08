@@ -1,7 +1,11 @@
 import logo from "./img/google.svg"
 
 function Header (){
-
+    const userLogged = {
+        lastName : "yeonsoo",
+        firstName : "Kang",
+        job : "étudiente"
+    }
     const isUserLoggedIn = true
     const itemsInCart = 2
 
@@ -14,8 +18,9 @@ function Header (){
                     <li><a href="">ABOUT US</a></li>
                     <li>
                         {isUserLoggedIn ? (
-                            <a href="">MY PAGE</a>
-                            ):( <button>CONNECTEZ-VOUS</button>
+                            <a href="">{userLogged.firstName} {userLogged.lastName} - {userLogged.job}</a>
+                            ):( <button>CONNECTEZ-VOUS</button> // 윗줄에 잘 보면 - 가 {}밖에 있기 때문에 js의 빼기 기호가 아니라 html 안의 내용요소처럼 글씨로 인식됐음
+                            // 그리고 {}는 valeur par valauer임. ,로 두개 같이 쓰거나 할 수 없음
                         )}  
                     </li>
                     <li>
